@@ -6,6 +6,9 @@ const app = express();
 // Connect db
 connectDB();
 
+// Define Routes
+app.use('/v1/users', require('./routes/v1/users'));
+
 app.get('/', (req, res) => {
   res.send('API running')
 });
